@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int arr[7];
-    cout << " Enter 7 elements " << endl;
-    for(int i=0;i<7;i++){
+    int arr[5];
+    cout << " Enter 5 elements " << endl;
+    for(int i=0;i<5;i++){
         cin >> arr[i];
     }
     for(int i=0;i<5;i++){
@@ -20,3 +20,11 @@ int main(){
     }
     return 0;
 }
+/*if (i != j && arr[i] == arr[j]) ke jb unke index different ho aur element same ho to unique = false hojayega, otherwise true hojayega.
+This means:
+
+i != j
+Don't compare an element with itself.
+arr[i] == arr[j]
+If another index has the same value...
+*/
