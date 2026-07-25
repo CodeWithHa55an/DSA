@@ -6,16 +6,15 @@ int main(){
     for(int i=0;i<5;i++){
         cin >> arr[i];
     }
-    int index = 0;
-    for(int i=0;i<5;i++){
+    int index = 4;
+    for(int i=0;i<=4;i--){
         if(arr[i]!=0){
             arr[index] = arr[i];
-            index++;
+            index--;
         }
     }
-    while(index<5){
-        arr[index]=0;
-        index++;
+    for(int i=index;i>=0;i--){
+        arr[i]=0;
     }
     cout << " Updated Array " << endl;
     for(int i=0;i<5;i++){
