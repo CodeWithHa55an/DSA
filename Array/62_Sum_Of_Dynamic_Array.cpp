@@ -12,5 +12,6 @@ int main(){
         sum+=*(arr+i);
     }
     cout << " Sum = : " << sum << endl;
+    delete[] arr;
     return 0;
 }
