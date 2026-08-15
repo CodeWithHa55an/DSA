@@ -1,34 +1,67 @@
 #include<iostream>
 using namespace std;
-struct Node{
+class Node{
+    public:
     int data;
     Node* next;
+    Node(int val){
+        data= val;
+        next = NULL;
+    }
 };
-int main(){
-int n;
-cout << " Enter number of nodes " << endl;
-cin >> n;
-Node* head = NULL;
-Node* temp = NULL;
-for(int i=0;i<n;i++){
-    Node* newNode = new Node;
-    cout << " Enter data : " << endl;
-    cin >> newNode->data;
-    newNode->next=NULL;
-    if(head==NULL){
-        head=newNode;
-        temp=newNode;
+class list{
+    public:
+    Node* head;
+    list(){
+        head=NULL;
     }
-    else{
-        temp->next=newNode;
-        temp=newNode;
-    }
+    void pushback(int val){
+Node* newNode = new Node(val);
+if(head==NULL){
+    head = newNode;
+    return;
 }
-cout << " Linked List : " << endl;
-temp=head;
-while(temp!=NULL){
-    cout<<temp->data << " ";
+Node* temp = head;
+while(temp->next!=NULL){
     temp=temp->next;
 }
-return 0;
+temp->next=newNode;
+
+    }
+    void popback(){
+        if(head->next==NULL){
+            delete head;
+            return;
+        }
+        Node* temp = head;
+        while(temp->next->next!=NULL){
+            temp=temp->next;
+        }
+        delete temp->next;
+        temp->next=NULL;
+    }
+    void popfront(){
+         if(head==NULL){
+            cout << " Linked list is empty " << endl;
+            return;
+        }
+        Node *temp = head;
+        head=head->next;
+        delete temp;
+    }
+    void display(){
+        Node* temp = head;
+        while(temp!=NULL){
+            cout << temp->data << " ";
+            temp=temp->next;
+        }
+    }
+};
+int main(){
+    list ll;
+    ll.pushback(11);
+    ll.pushback(12);
+    ll.popfront();
+    ll.display();
+    return 0;
 }

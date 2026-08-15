@@ -41,7 +41,6 @@ class Linked{
 int main(){
   Linked ll;
   ll.Pushfront(11);
-  ll.Pushfront(12);
   cout << " Without Pop-Front " << endl;
   ll.display();
   cout << " With Pop-Front " << endl;
