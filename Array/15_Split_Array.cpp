@@ -1,3 +1,10 @@
+/*
+But you CAN use i + 5 here:
+If you change the assignment to:
+secondhalf[i] = arr[i + 5];
+My idea i + 5 is also correct, but it should be used with arr, not secondhalf.
+In short: i-5 changes the destination index; i+5 changes the source index.
+*/
 #include<iostream>
 using namespace std;
 int main(){

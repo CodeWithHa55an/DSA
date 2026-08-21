@@ -1,3 +1,6 @@
+/*
+First occurrence → save mid and move LEFT (end = mid-1). Last occurrence → save mid and move RIGHT (start = mid+1).
+*/
 #include <iostream>
 using namespace std;
 int firstoccurence(int arr[],int size,int key){
@@ -45,7 +48,7 @@ int main(){
     cout << " Enter key " << endl;
     cin >> key;
     int first = firstoccurence(arr,size,key);
-    int last = firstoccurence(arr,size,key);
+    int last = lastoccurence(arr,size,key);
    if(first==-1){
     cout << " Element not found " << endl;
    }

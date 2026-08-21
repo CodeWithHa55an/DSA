@@ -1,3 +1,16 @@
+/*
+📝 Purpose of k % 5
+
+k % 5 keeps the rotation count within the array size.
+
+Rotating an array 5 times brings it back to its original order.
+So rotating 7 times is the same as rotating 2 times.
+k % 5 gives only the extra rotations needed.
+
+Example: 7 % 5 = 2
+
+👉 In short: k % 5 avoids unnecessary rotations by removing complete rounds of rotation.
+*/
 #include<iostream>
 using namespace std;
 int main(){
